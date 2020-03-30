@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: Coronavirus Resources
+title: Coronavirus Resources @ JHU
 
 # Short description of your site
 description: COVID-19 Twitter data source with demographic information.
@@ -20,6 +20,8 @@ description: COVID-19 Twitter data source with demographic information.
 
 # List of links in the navigation bar
 navbar-links:
+  Data: "data"
+  Download: "download"
   About Us: "aboutme"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
@@ -28,7 +30,7 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/jhu_logo.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -68,10 +70,10 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
 #  rss: true
-  email: "someone@example.com"
+  email: "mdredze@cs.jhu.edu"
 #  facebook: deanattali
-  github: daattali
-  twitter: daattali
+  github: mdredze
+  twitter: mdredze
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -93,7 +95,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "twitterdata.covid19dataresources.org/"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
