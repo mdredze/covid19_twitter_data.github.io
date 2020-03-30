@@ -22,7 +22,7 @@ description: COVID-19 Twitter data source with demographic information.
 navbar-links:
   Data: "data"
   Download: "download"
-  About Us: "aboutme"
+  About Us: "aboutus"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
