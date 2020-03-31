@@ -1,27 +1,10 @@
 ---
 layout: page
-title: Download Data
-subtitle: Twitter data can be downloaded below
+title: Downloads
+subtitle: 
 ---
+A complete description of the Twitter data can be found at <a href='{{site.url}}/data/'>Data</a>.
 
-<center>
-<table style='align:center;'>
-    <tr> 
-        <td> Data Name </td>
-        <td> Data size </td>
-        <td> Download Link </td>
-        <td> Last Update </td>
-    </tr>
-    <tr>
-        <td> Twitter COVID-19 </td> 
-        <td> > 10 M </td>
-        <td><a href='{{site.url}}'> Link </a></td>
-        <td> 2020-03-29 </td>
-    </tr> 
-</table>
-</center>
+We plan to update the data regularly.
 
-<p> 
-Please check <a href='{{site.url}}/data/'>Data</a> page for data description. 
-The data will be updated regularly.
-</p>
+- [2020-02-18.json.gz](http://downloads.covid19dataresources.org/twitter/2020-02-18.json.gz)
