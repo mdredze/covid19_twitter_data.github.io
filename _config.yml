@@ -1,10 +1,10 @@
 # --- General options --- #
 
 # Name of website
-title: Coronavirus Resources @ JHU
+title: Coronavirus Twitter Data
 
 # Short description of your site
-description: COVID-19 Twitter data source with demographic information.
+description: A Twitter dataset on COVID-19 (Coronavirus)
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,9 +20,11 @@ description: COVID-19 Twitter data source with demographic information.
 
 # List of links in the navigation bar
 navbar-links:
+  Home: "index"
+  About: "about"
   Data: "data"
   Download: "download"
-  About Us: "aboutus"
+  
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
@@ -62,7 +64,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: JHU
+  name: Mark Dredze at Johns Hopkins University
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -72,8 +74,9 @@ social-network-links:
 #  rss: true
   email: "mdredze@cs.jhu.edu"
 #  facebook: deanattali
-  github: mdredze
+#  github: mdredze
   twitter: mdredze
+  web: http://www.dredze.com
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname

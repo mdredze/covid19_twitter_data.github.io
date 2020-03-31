@@ -90,3 +90,8 @@ yelp:
   name: "Yelp"
   urlTemplate: "https://{value}.yelp.com"
   icon: "fab fa-yelp"
+
+web:
+  name: "Web"
+  urlTemplate: "{value}"
+  icon: "fas fa-globe"
