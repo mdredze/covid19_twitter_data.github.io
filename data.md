@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data Description
+title: Data
 subtitle: 
 ---
 
@@ -54,7 +54,7 @@ We also include tweets that contain these keywords as hashtags, e.g. #covid19.
 We create the dataset using the following process.
 
 1. We match (case-insensitive) every downloaded tweet against the above keywords, including if they appear as hashtags. 
-2. We inferred the location of the tweet using [Carmen](https://github.com/mdredze/carmen-python), a geolocation toolkit. Carmen provides three levels of information: country, state and city. If the tweet has a `place` or `coordinates` field, Carmen return this information. Otherwise, Carmen infers the location from the profile field.
+2. We inferred the location of the tweet using [Carmen](https://github.com/mdredze/carmen-python), a geolocation toolkit. Carmen provides three levels of information: country, state and city. If the tweet has a `place` or `coordinates` field, Carmen returns this information. Otherwise, Carmen infers the location from the profile field.
 
 
 
