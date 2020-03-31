@@ -1,11 +1,10 @@
 ---
 layout: page
-title: About Our Team
+title: About
 subtitle: 
 ---
 
-# Who Are We?
-
+# About Us
 We are a team of academic researchers who utilize web and social media data to understand important problems in public health. We focus on developing novel machine learning models and applying the models in solving publich health crisises. Our team originally formed in 2015 under our NIH R01, “Supplementing Survey-Based Analyses of Group Vaccination Narratives and Behaviors Using Social Media”, which uses computer algorithms, demographic and geolocation identifiers, and the scale of Big Data, to combine existing survey techniques with Twitter conversations about vaccination. In the past several years, our team as grown to consider other domains in public health.
 
 This website hosts data and publications of a COVID-19 Twitter project. The project is released and led by Prof. [Mark Dredze](https://www.cs.jhu.edu/~mdredze/), an Associate Professor of Computer Science at Johns Hopkins University. 
