@@ -4,50 +4,57 @@ title: Data Description
 subtitle: 
 ---
 
-<h1 class='#top'> Data Overview </h1>
+<h1 class='#top'> Data Format </h1>
 
-The data contains over 10 million COVID-19 related tweets collected from 2020-02-06 to 2020-03-27.
-All data entries are saved as json format.
-Each tweet was annotated with two addtional extracted information, keywords and geolocation.
-Within the data, tweets are grouped and saved separatively by their created dates.
-Each file's name format follows *covid19_year_month_day_minimal.json*, where each line is one tweet data entry.
-You can re-collect the tweets by the [Hydrator](https://github.com/DocNow/hydrator).
+This Twitter dataset contains tens of millions tweets related to COVID-19 collected starting on February 6, 2020.
+
+Each gzipped file contains data from a single day. Each line of the file contains a single JSON record. You should read the file one line at a time and parse that JSON line to obtain information about one tweet.
+
+Each tweet record will have the following fields:
+
+- `tweet_id`: An integer value. The ID of the tweet. You will use this ID to download the tweet from Twitter.
+- `user_id`: An integer value. The user ID of the author of this tweet. If this is a retweet, this is the user who retweeted the tweet.
+- `date`: A string value. The date the tweet was posted in the standard Twitter date format, e.g. "Wed Feb 12 04:59:55 +0000 2020"
+- `keywords`: A list. Contains COVID-19 related keywords that we used to identify this tweet.
+- `location`: A dictionary. The location of this tweet. If a location is known, it can include `country`, `state`, and `city`. 
+
+An example tweet record:
+```{"tweet_id":1243171774055014401,"user_id":852581594674208768,"date":"Thu Mar 26 13:43:42 +0000 2020","keywords":["covid"],"location":{"country":"United States","state":"Maryland","city":"Baltimore"}}```
 
 
-A data entry example:
-```{"tweet_id":1227457278930014208,"user_id":860989842166923264,"date":"Wed Feb 12 04:59:55 +0000 2020","keywords":["wuhan"],"city":{"country":"United States","state":"Oregon","city":"Tigard"}}```
+To obtain the original tweets, use the [Twitter Hydrator](https://github.com/DocNow/hydrator), which takes the `tweet_id` and downloads the corresponding tweet (if it is available.)
 
-
-
-<h1>Data Format</h1>
-
-The data contains five data fields: *Twitter ID*, *User ID*, *Date*, *Keywords* and *Location*.  
-
-* Twitter ID (`tweet_id`): An integer value that represents a unique id of a tweet.
-* User ID (`user_id`): An integer value that represents a unique id of the user who posts the tweet.
-* Date (`created_at`): A string value that indicates the date when the tweet was created. 
-* Keywords (`keywords`): A list of detected keywords that relate to Coronavirus. Default is **['UNK']**.
-* Location (`location`): A dictionary of detected geolocations include country, state and city. Default is **'UNK'**.
+We occasionally have missing data due to downloading issues. You can observe missing data by gaps in the dates within the file.
 
 
 
-<h1>How the Data was Processed</h1>
+<h1>Data Source</h1>
+We use the Twitter public keyword streaming API to download all tweets containing COVID-19 related keywords. The keywords included in this collection are:
+```coronavirus
+wuhan
+2019ncov
+sars
+mers
+2019-ncov
+wuflu
+COVID-19
+COVID19
+COVID
+covid-19
+covid19
+covid
+SARS2
+SARSCOV19```
 
-We generate the data by the following three steps:
-
-1. Tweet preprocessing: We collected tweets daily from 2020-02-06 to 2020-03-27 and saved the tweets as json files. We removed the tweets that were not well formatted in json entries.
-
-2. Keywords extraction: We annotated lowercased tweets by a list of keywords that relate to the COVID-19. Any tokens including hashtags start with the keywords will be extracted. 
-    * The keyword list: coronavirus, wuhan, 2019ncov, sars, mers, 2019-ncov, wuflu, covid-19, covid19
-covid, sars2, sarsscov19
-
-3. Location extraction: We applied the [Carmen](https://github.com/mdredze/carmen-python), a geolocation annotation toolkit, to obtain the location information from tweet metadata and user profiles. Each location contains three levels of information, country, state and city. Any empty fields are assigned *UNK*.
+We also include tweets that contain these keywords as hashtags, e.g. #covid19.
 
 
+<h1>Data Processing</h1>
+
+We create the dataset using the following process.
+
+1. We match (case-insensitive) every downloaded tweet against the above keywords, including if they appear as hashtags. 
+2. We inferred the location of the tweet using [Carmen](https://github.com/mdredze/carmen-python), a geolocation toolkit. Carmen provides three levels of information: country, state and city. If the tweet has a `place` or `coordinates` field, Carmen return this information. Otherwise, Carmen infers the location from the profile field.
 
 
 
-
-<div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-</div>
