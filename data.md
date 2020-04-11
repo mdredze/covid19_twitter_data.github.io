@@ -56,5 +56,23 @@ We create the dataset using the following process.
 1. We match (case-insensitive) every downloaded tweet against the above keywords, including if they appear as hashtags. 
 2. We inferred the location of the tweet using [Carmen](https://github.com/mdredze/carmen-python), a geolocation toolkit. Carmen provides three levels of information: country, state and city. If the tweet has a `place` or `coordinates` field, Carmen returns this information. Otherwise, Carmen infers the location from the profile field.
 
+<h1> Citation </h1>
+```
+@dataset{huang_xiaolei_2020_3735015,
+  author       = {Huang, Xiaolei and
+                  Jamison, Amelia and
+                  Broniatowski, David and
+                  Quinn, Sandra and
+                  Dredze, Mark},
+  title        = {{Coronavirus Twitter Data: A collection of COVID-19 
+                   tweets with automated annotations}},
+  month        = mar,
+  year         = 2020,
+  note         = {http://twitterdata.covid19dataresources.org/index},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.3735015},
+  url          = {https://doi.org/10.5281/zenodo.3735015}
+}
+```
 
 

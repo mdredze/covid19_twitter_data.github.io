@@ -7,4 +7,4 @@ A complete description of the Twitter data can be found at <a href='{{site.url}}
 
 We plan to update the data regularly.
 
-- [2020-02-18.json.gz](http://downloads.covid19dataresources.org/twitter/2020-02-18.json.gz)
+- [Download Link](https://doi.org/10.5281/zenodo.3735015) (Updated on April 10 2020)
