@@ -30,7 +30,8 @@ We occasionally have missing data due to downloading issues. You can observe mis
 
 <h1>Data Source</h1>
 We use the Twitter public keyword streaming API to download all tweets containing COVID-19 related keywords. The keywords included in this collection are:
-```coronavirus
+```
+coronavirus
 wuhan
 2019ncov
 sars
@@ -44,7 +45,8 @@ covid-19
 covid19
 covid
 SARS2
-SARSCOV19```
+SARSCOV19
+```
 
 We also include tweets that contain these keywords as hashtags, e.g. #covid19.
 
@@ -57,6 +59,7 @@ We create the dataset using the following process.
 2. We inferred the location of the tweet using [Carmen](https://github.com/mdredze/carmen-python), a geolocation toolkit. Carmen provides three levels of information: country, state and city. If the tweet has a `place` or `coordinates` field, Carmen returns this information. Otherwise, Carmen infers the location from the profile field.
 
 <h1> Citation </h1>
+
 ```
 @dataset{huang_xiaolei_2020_3735015,
   author       = {Huang, Xiaolei and
