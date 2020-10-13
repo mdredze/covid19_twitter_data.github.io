@@ -61,16 +61,11 @@ We create the dataset using the following process.
 <h1> Citation </h1>
 
 ```
-@dataset{huang_xiaolei_2020_3735015,
-  author       = {Huang, Xiaolei and
-                  Jamison, Amelia and
-                  Broniatowski, David and
-                  Quinn, Sandra and
-                  Dredze, Mark},
-  title        = {{Coronavirus Twitter Data: A collection of COVID-19 
-                   tweets with automated annotations}},
-  month        = mar,
-  year         = 2020,
+@misc{huang_xiaolei_2020_3735015,
+  author       = {Huang, Xiaolei and Jamison, Amelia and Broniatowski, David and Quinn, Sandra and Dredze, Mark},
+  title        = {Coronavirus Twitter Data: A collection of COVID-19 tweets with automated annotations},
+  month        = {Mar},
+  year         = {2020},
   note         = {http://twitterdata.covid19dataresources.org/index},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.3735015},
