@@ -7,7 +7,7 @@ A complete description of the Twitter data can be found at <a href='{{site.url}}
 
 We plan to update the data regularly.
 
-- [Download Link](https://doi.org/10.5281/zenodo.3735015) (Updated on Feb. 01 2023)
+- [Download Link](https://doi.org/10.5281/zenodo.75000405) (Updated on March 01 2023)
 
 
 ## Issues
