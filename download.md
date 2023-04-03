@@ -5,9 +5,9 @@ subtitle:
 ---
 A complete description of the Twitter data can be found at <a href='{{site.url}}/data/'>Data</a>.
 
-We plan to update the data regularly.
+* We will not update any new versions due to Twitter API shutdown. *
 
-- [Download Link](https://doi.org/10.5281/zenodo.75000405) (Updated on March 01 2023)
+- [Download Link](https://doi.org/10.5281/zenodo.75000405) (Updated on April 02 2023)
 
 
 ## Issues
